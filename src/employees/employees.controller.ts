@@ -9,7 +9,7 @@ export class EmployeesController {
 
   @Get()
   getAllEmployees(@Query() param: EmployeeSearchDto) {
-    console.log('param111111', param);
+    console.log('params', param);
 
     if (Object.keys(param).length) {
       return this.employeesService.employeeSearch(param);
@@ -42,6 +42,7 @@ export class EmployeesController {
 
   @Put('/:id/city')
   updateEmployee(@Param('id') id: string,@Body() employeeUpdateDto:EmployeeUpdateDto) {
+    employeeUpdateDto.id = id
     return this.employeesService.updateEmployee(employeeUpdateDto)
   }
 }

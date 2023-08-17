@@ -28,6 +28,7 @@ export class EmployeesService {
       tier,
     };
 
+    // @ts-ignore
     this.employees.push(employee);
     return employee;
   }
@@ -52,7 +53,9 @@ export class EmployeesService {
   updateEmployee(employeeUpdateDto: EmployeeUpdateDto) {
     const { id, city } = employeeUpdateDto;
 
-    const employee = this.getEmployeeById(id);
-    employee.nearestCity = city;
+    let employee = this.getEmployeeById(id);
+    // @ts-ignore
+    employee.nearestCity = city
+    return employee
   }
 }
