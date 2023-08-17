@@ -32,21 +32,21 @@ export class EmployeesService {
     return employee;
   }
 
-  employeeSearch(employeeSearchDto: EmployeeSearchDto) {
-
-    const { status, name } = employeeSearchDto;
-    let employees = this.getAllEmployees();
-
-    if (status) {
-      employees.filter((employee) => employee.status === status)
-    }
-    if (name) {
-      employees.filter((employee) => employee.firstName.includes(name) )
-    }
-
-    console.log(employees);
-
-
-
-  }
+  // employeeSearch(employeeSearchDto: EmployeeSearchDto) {
+  //
+  //   const { status, name } = employeeSearchDto;
+  //   let employees = this.getAllEmployees();
+  //
+  //   if (status) {
+  //     employees.filter((employee) => employee.status === status)
+  //   }
+  //   if (name) {
+  //     employees.filter((employee) => employee.firstName.includes(name) )
+  //   }
+  //
+  //   console.log(employees);
+  //
+  //
+  //
+  // }
 }
