@@ -3,9 +3,10 @@ import { Module } from '@nestjs/common';
 import { AppService } from './app.service';
 import { TypeOrmModule } from "@nestjs/typeorm";
 import { Employee } from "./typeorm/entities/Employee";
+import { EmployeeModule } from "./employee/employee.module";
 
 @Module({
-  imports: [
+  imports: [EmployeeModule,
     TypeOrmModule.forRoot({
       type: 'mysql',
       host: 'localhost',
