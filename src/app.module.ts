@@ -7,6 +7,7 @@ import { EmployeeModule } from "./employee/employee.module";
 import { UserModule } from './user/user.module';
 import { User } from "./typeorm/entities/User";
 import { Profile } from "./typeorm/entities/Profile";
+import { Posts } from "./typeorm/entities/Posts";
 
 
 @Module({
@@ -18,7 +19,7 @@ import { Profile } from "./typeorm/entities/Profile";
       username: 'root',
       password: 'root',
       database: 'test2',
-      entities: [Employee,User,Profile],
+      entities: [Employee,User,Profile,Posts],
       synchronize: true,
 
     }),
