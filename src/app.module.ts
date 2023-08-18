@@ -6,6 +6,8 @@ import { Employee } from "./typeorm/entities/Employee";
 import { EmployeeModule } from "./employee/employee.module";
 import { UserModule } from './user/user.module';
 import { User } from "./typeorm/entities/User";
+import { Profile } from "./typeorm/entities/Profile";
+
 
 @Module({
   imports: [EmployeeModule,
@@ -15,12 +17,13 @@ import { User } from "./typeorm/entities/User";
       port: 3306,
       username: 'root',
       password: 'root',
-      database: 'test1',
-      entities: [Employee,User],
+      database: 'test2',
+      entities: [Employee,User,Profile],
       synchronize: true,
 
     }),
     UserModule,
+
   ],
   controllers: [],
   providers: [AppService],
