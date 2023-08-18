@@ -18,7 +18,7 @@ import { Posts } from "./typeorm/entities/Posts";
       port: 3306,
       username: 'root',
       password: 'root',
-      database: 'test2',
+      database: 'test1',
       entities: [Employee,User,Profile,Posts],
       synchronize: true,
 
