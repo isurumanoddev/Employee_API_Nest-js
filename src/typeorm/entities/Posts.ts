@@ -14,4 +14,6 @@ export class Posts {
 
   @ManyToOne(() => User, (user) => user.posts)
   user: User;
+
+
 }
